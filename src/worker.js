@@ -8,16 +8,16 @@ self.addEventListener("message", async (e) => {
 
   let model_url = "";
   if (data?.model === "anime_4x") {
-    model_url = `https://github.com/Aaaou/-web-realesrgan/blob/master/realesrgan/anime_4x/model.json`;
+    model_url = `/anime_4x/model.json`;
   }
   if (data?.model === "anime_4x_plus") {
-    model_url = `https://github.com/Aaaou/-web-realesrgan/blob/master/realesrgan/anime_4x_plus/model.json`;
+    model_url = `/anime_4x_plus/model.json`;
   }
   if (data?.model === "general") {
-    model_url = `https://github.com/Aaaou/-web-realesrgan/blob/master/realesrgan/general/model.json`;
+    model_url = `/general/model.json`;
   }
   if (data?.model === "realx4plus") {
-    model_url = `https://github.com/Aaaou/-web-realesrgan/blob/master/realesrgan/realx4plus/model.json`;
+    model_url = `/realx4plus/model.json`;
   }
   if (!(await tf.setBackend(data?.backend || "webgl"))) {
     postMessage({
